@@ -1,0 +1,115 @@
+================================================================================
+KNOWLEDGE DISTILLATION COMPARISON - LOADED CHECKPOINT ANALYSIS
+Part 1: Logit Matching Methods
+================================================================================
+
+Timestamp: 2025-10-30T10:51:04.617459
+Device: Quadro RTX 5000
+Checkpoint Directory: C:\Users\DELL 7750\Desktop\Personal\LUMS\ATML\ASSIGNMENT 3\project\checkpoints
+
+--------------------------------------------------------------------------------
+RESULTS SUMMARY
+--------------------------------------------------------------------------------
+
+Method                    Train Acc       Val Acc         Test Acc       
+----------------------------------------------------------------------
+Logit Matching             99.97%         58.80%         59.59%
+Label Smoothing            99.98%         59.04%         58.84%
+Decoupled KD               98.00%         50.02%         50.63%
+
+
+--------------------------------------------------------------------------------
+METHOD DESCRIPTIONS
+--------------------------------------------------------------------------------
+
+1. BASIC LOGIT MATCHING
+   How it works:
+   - Student learns to match teacher's softened logits (temperature-scaled)
+   - Uses KL divergence loss between softened distributions
+   - Combines distillation loss with standard cross-entropy loss
+   - Alpha parameter balances KD loss (default: 0.5)
+   - Temperature parameter controls softness of distributions (default: 4.0)
+   - Most straightforward KD approach
+
+2. LABEL SMOOTHING
+   How it works:
+   - Regularization technique that softens target labels
+   - Instead of one-hot [0,1,0,...], uses [0.001, 0.901, 0.001,...]
+   - Prevents model overconfidence on training data
+   - Does NOT directly use teacher (teacher role is implicit regularization)
+   - Smoother parameter controls label smoothing strength
+   - Simpler alternative to explicit knowledge distillation
+
+3. DECOUPLED KNOWLEDGE DISTILLATION (DKD)
+   How it works:
+   - Separates distillation into two components:
+     * TCKD: Target Class KD (emphasizes correct class matching)
+     * NCKD: Non-Target Class KD (differentiates wrong classes)
+   - Gives finer control over what knowledge is transferred
+   - More sophisticated than basic logit matching
+   - Typically outperforms standard KD on similar compute budgets
+   - Multiple hyperparameters: alpha, beta, temperature
+
+--------------------------------------------------------------------------------
+PERFORMANCE ANALYSIS
+--------------------------------------------------------------------------------
+
+Validation Accuracy:
+  Best:  Label Smoothing (59.04%)
+  Worst: Decoupled KD (50.02%)
+  Range: 9.02%
+
+Test Accuracy:
+  Best:  Logit Matching (59.59%)
+  Worst: Decoupled KD (50.63%)
+  Range: 8.96%
+
+Overfitting Analysis (Train-Val Gap):
+  Logit Matching           :  41.17% (High)
+  Label Smoothing          :  40.94% (High)
+  Decoupled KD             :  47.98% (High)
+
+
+--------------------------------------------------------------------------------
+KEY INSIGHTS & OBSERVATIONS
+--------------------------------------------------------------------------------
+
+1. Comparison of Methods:
+   - LM is direct knowledge transfer via soft targets
+   - LS is indirect, regularizing the student's confidence
+   - DKD is more nuanced, decomposing the knowledge transfer
+
+2. Performance Trade-offs:
+
+   Logit Matching:
+     - Validation:  58.80%
+     - Test:        59.59%
+     - Train:       99.97%
+     - Overfitting: 41.17%
+
+   Label Smoothing:
+     - Validation:  59.04%
+     - Test:        58.84%
+     - Train:       99.98%
+     - Overfitting: 40.94%
+
+   Decoupled KD:
+     - Validation:  50.02%
+     - Test:        50.63%
+     - Train:       98.00%
+     - Overfitting: 47.98%
+
+
+3. Training Stability & Generalization:
+   - Check if val accuracy aligns with test accuracy
+   - Lower train-val gap indicates better regularization
+   - Test accuracy closest to validation is most reliable
+
+4. Recommendations:
+   - Best for inference: Logit Matching (59.59%)
+   - Most stable: Label Smoothing (gap: 40.94%)
+
+
+--------------------------------------------------------------------------------
+END OF ANALYSIS REPORT
+================================================================================

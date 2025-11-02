@@ -1,0 +1,23 @@
+{
+  "Hints (FitNet)": {
+    "val_accuracy": 53.49,
+    "test_accuracy": 55.04,
+    "train_accs": [],
+    "val_accs": [],
+    "train_losses": []
+  },
+  "Independent Student (SI)": {
+    "val_accuracy": 53.44,
+    "test_accuracy": 53.53,
+    "train_accs": [],
+    "val_accs": [],
+    "train_losses": []
+  },
+  "Logit Matching (LM)": {
+    "val_accuracy": 55.22,
+    "test_accuracy": 55.85,
+    "train_accs": [],
+    "val_accs": [],
+    "train_losses": []
+  }
+}

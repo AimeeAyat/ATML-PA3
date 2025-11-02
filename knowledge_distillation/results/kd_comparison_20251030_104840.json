@@ -1,0 +1,17 @@
+{
+  "Logit Matching": {
+    "train_accuracy": 99.965,
+    "val_accuracy": 58.8,
+    "test_accuracy": 59.589999999999996
+  },
+  "Label Smoothing": {
+    "train_accuracy": 99.985,
+    "val_accuracy": 59.040000000000006,
+    "test_accuracy": 58.84
+  },
+  "Decoupled KD": {
+    "train_accuracy": 97.9975,
+    "val_accuracy": 50.019999999999996,
+    "test_accuracy": 50.629999999999995
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "existing_accuracy": 55.85,
+  "new_accuracy": 59.77,
+  "difference": 3.9200000000000017,
+  "classification": "SIGNIFICANT",
+  "recommendation": "VGG19"
+}

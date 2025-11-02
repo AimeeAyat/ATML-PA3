@@ -1,0 +1,53 @@
+{
+  "teacher_accuracy": 0.0167,
+  "students_metrics": {
+    "SI": {
+      "accuracy": 0.5353,
+      "accuracy_diff": 0.5186,
+      "kl_divergence_mean": 11.516758918762207,
+      "kl_divergence_std": 4.6967949867248535,
+      "js_divergence_mean": 0.6151267290115356,
+      "cosine_similarity_mean": 0.12675073742866516
+    },
+    "LM": {
+      "accuracy": 0.5585,
+      "accuracy_diff": 0.5418,
+      "kl_divergence_mean": 0.7707873582839966,
+      "kl_divergence_std": 0.649686872959137,
+      "js_divergence_mean": 0.2028457671403885,
+      "cosine_similarity_mean": 0.361438125371933
+    },
+    "LS": {
+      "accuracy": 0.5884,
+      "accuracy_diff": 0.5717,
+      "kl_divergence_mean": 1.0551666021347046,
+      "kl_divergence_std": 1.0114892721176147,
+      "js_divergence_mean": 0.2390543520450592,
+      "cosine_similarity_mean": 0.4011949896812439
+    },
+    "DKD": {
+      "accuracy": 0.5063,
+      "accuracy_diff": 0.4896,
+      "kl_divergence_mean": 4.474022388458252,
+      "kl_divergence_std": 3.8211734294891357,
+      "js_divergence_mean": 0.49427127838134766,
+      "cosine_similarity_mean": 0.16284912824630737
+    },
+    "Hints": {
+      "accuracy": 0.5504,
+      "accuracy_diff": 0.5337,
+      "kl_divergence_mean": 10.493995666503906,
+      "kl_divergence_std": 4.47109317779541,
+      "js_divergence_mean": 0.6053649187088013,
+      "cosine_similarity_mean": 0.1317589282989502
+    },
+    "CRD": {
+      "accuracy": 0.5414,
+      "accuracy_diff": 0.5246999999999999,
+      "kl_divergence_mean": 10.587248802185059,
+      "kl_divergence_std": 4.271265506744385,
+      "js_divergence_mean": 0.6084412336349487,
+      "cosine_similarity_mean": 0.1308295875787735
+    }
+  }
+}

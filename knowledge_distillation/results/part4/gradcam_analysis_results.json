@@ -1,0 +1,56 @@
+{
+  "SI": {
+    "num_samples": 10000,
+    "accuracy": 0.5353,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  },
+  "LM": {
+    "num_samples": 10000,
+    "accuracy": 0.5585,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  },
+  "LS": {
+    "num_samples": 10000,
+    "accuracy": 0.5884,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  },
+  "DKD": {
+    "num_samples": 10000,
+    "accuracy": 0.5063,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  },
+  "Hints": {
+    "num_samples": 10000,
+    "accuracy": 0.5504,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  },
+  "CRD": {
+    "num_samples": 10000,
+    "accuracy": 0.5414,
+    "cams_shape": [
+      10000,
+      1,
+      1
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Original Teacher": {
+    "accuracy_normal": 0.0078,
+    "accuracy_jittered": 0.008,
+    "accuracy_drop": -0.00020000000000000052,
+    "invariance_ratio": 1.025641012491782
+  },
+  "Color-Invariant Teacher": {
+    "accuracy_normal": 0.3288,
+    "accuracy_jittered": 0.3174,
+    "accuracy_drop": 0.011399999999999966,
+    "invariance_ratio": 0.9653284668596933
+  },
+  "CRD Student (From Color-Invariant Teacher)": {
+    "accuracy_normal": 0.5579,
+    "accuracy_jittered": 0.4412,
+    "accuracy_drop": 0.11669999999999997,
+    "invariance_ratio": 0.790822727945721
+  },
+  "Independent Student (SI)": {
+    "accuracy_normal": 0.5353,
+    "accuracy_jittered": 0.4073,
+    "accuracy_drop": 0.128,
+    "invariance_ratio": 0.7608817484100725
+  },
+  "Logit Matching (LM)": {
+    "accuracy_normal": 0.5884,
+    "accuracy_jittered": 0.477,
+    "accuracy_drop": 0.11140000000000005,
+    "invariance_ratio": 0.8106730114189882
+  }
+}

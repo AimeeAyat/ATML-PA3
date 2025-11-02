@@ -1,0 +1,8 @@
+Metric,Baseline,Unstructured,Structured
+Accuracy (%),92.13,78.19,61.73
+Accuracy Drop (%),0.00,13.94,30.40
+Size (MB),491.36,491.36*,491.36
+Sparsity (%),0.00,82.63,2.71
+Active Params,"128,807,306","22,372,548","125,318,329"
+Inference (ms),1.32,1.32,1.32
+Speedup,1.00x,1.00x,1.00x
